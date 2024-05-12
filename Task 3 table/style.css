@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-image: url(./table-bg.jpg);
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600PX;
+    
+}
+
+
+.tb-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.662);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 80%;
+    height: 80px;
+    margin-top: 20px;
+
+}
+
+
+h1{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+.searchbar{
+    position: relative;
+       
+}
+
+
+input{
+background-color: rgba(255, 255, 255, 0.628);
+border-radius: 2rem;
+border: 0px;
+height: 50px;
+width: 400px;
+padding-left: 10px;
+
+}
+
+img{
+    height:20px;
+    width: 20px;
+    
+}
+
+
+.search{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+        
+}
+
+.lupa{
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+
+.tb-body{
+    background-color: rgba(255, 255, 255, 0.322);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+
+.tablebg{
+    background-color: rgba(255, 255, 255, 0.751);
+    border-radius: 1rem;
+    width: 95%;
+    height: 93%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+  }
+
+
+
+table{
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+  
+}
+
+th{
+    padding: 15px 55px ;
+}
+
+td{
+    padding:  15px 20px;
+   
+}
+
+
+.user{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+
+table tr:nth-child(2n-1){
+  background-color: rgb(200, 200, 200);
+  
+}
+
+
+
+.yellow{
+    padding: 5px 30px;
+    background-color: yellow;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+.dollar::before{
+    content: "$";
+}
