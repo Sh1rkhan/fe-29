@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(36, 149, 194);
+}
+
+.main {
+    margin: 50px 600px;
+    width: 70%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+
+.grid-box {
+    width: 610px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:  2px;
+    border: 2px solid;
+    border-color: #fff;
+    }
+
+.grid-item {
+    width: 200px;
+    background-color: yellow;
+  
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item:hover img{
+    scale: 1.05;
+}
+
+
+.i2 {
+    animation: linear moveimg1 2s forwards;
+}
+
+.i8, .i5{
+    animation: linear moveimg2-9 2s forwards; 
+}
+
+.i6{
+    animation: linear moveimg3-4 2s forwards;
+}
+
+.i7{
+    animation: linear moveimg3-4 2s forwards;
+}
+
+
+.i3, .i4{
+    animation: linear moveimg6-7 2s forwards;
+}
+
+.i1{
+    animation: linear moveimg5 2s forwards;
+}
+
+
+.i9{
+    animation: linear moveimg8 2s forwards;
+
+}
+
+@keyframes moveimg1 {
+    50%{
+        transform: translate(202px);
+    }
+    100%{
+        transform: translate(202px, 118.5px);
+    }
+}
+
+@keyframes moveimg2-9 {
+    100%{
+        transform: translateX(-202px);
+    }
+    
+}
+
+@keyframes moveimg3-4 {
+    100%{
+        transform: translateY(118.5px);
+    }
+
+}
+
+@keyframes moveimg3 {
+    100%{
+        transform: translateY(118.5px);
+    }
+
+}
+
+@keyframes moveimg6-7 {
+    100%{
+        transform: translateY(-118.5px);
+    }
+
+}
+
+
+
+@keyframes moveimg5 {
+    
+        50%{
+            transform: translateY(118.5px);
+        }
+        100%{
+            transform: translate(202px, 118.5px);
+        }
+    }
+
+
+@keyframes moveimg8{
+    100%{
+        transform: translateY(-237px);
+    }
+
+}
