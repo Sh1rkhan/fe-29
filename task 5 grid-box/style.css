@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+        width: 70%;
+        margin: 100px auto;
+}
+
+
+.grid-container{
+    display: grid;
+    background-color: blue;
+    padding: 20px;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+   
+   }
+
+img{
+   width: 100%;
+}
+
+/* .grid-item:first-child {
+    grid-row: 1 /3;
+    width: 347px;
+    height: 505px;
+} */
