@@ -108,3 +108,8 @@
 // console.log(existsAndTruthy({x:'a',y:null,z:'c'},'y')); 
 
 // console.log(existsAndTruthy({x:'a',b:'b',z:undefined},'z')); 
+
+
+
+
+// test
