@@ -6,8 +6,6 @@
 //console.log(`lorem ipsum \u00A9`);  
 
 
-
-
 // stringin icinde - ardiciligina ve sayini gosterir
 
 
@@ -122,48 +120,53 @@
 
 // TASK 6
 
-// const userInput = prompt(`"YYYY.MM.DD" formatinda tarix daxil edin`, `2019.05.12`)
-// function month (months) {
-// let months = `01` === "JAN"
-// let months = `02` === "FEB"
-// let months = `03` === "MAR"
-// let months = `04` === "APR"
-// let months = `05` === "MAY"
-// let months = `06` === "JUN"
-// let months = `07` === "JUL"
-// let months = `08` === "AUG"
-// let months = `09` === "SEP"
-// let months = `10` === "OCT"
-// let months = `11` === "NOV"
-// let months = `12` === "DEC"
 
-
+// function formatDate(date) {
+//     let parts = date.split('.');
+  
+//     let year  =   parts[0];
+//     let month =   parts[1];
+//     let day   =   parts[2];
+//     let NameOfMonths = ['january', 'february', 'march', 'april', 'may', 'june',
+//         'july', 'august', 'september', 'october', 'november', 'december'];
+    
+//         if (year.length === 4 && month.length === 2 && day.length === 2) {
+        
+//             let changeNumberToNames = NameOfMonths[+month - 1];
+//             let formattedDate = `"${day} ${changeNumberToNames} ${year}"`;
+//             return console.log(formattedDate);
+//         }   else return console.log(`tarixi duzgun formatda daxil edin`);
 // }
 
-// const date = 
-
-// console.log(months)
-
+// let userInput = prompt(`"YYYY.MM.DD" formatinda tarix daxil edin`, `2019.05.12`);
+// formatDate(userInput);
 
 
 
 // TASK 7 
+// function findDotInText (text) {
+//     let a = text
+//     let dot = a.indexOf(".")
+//     return console.log(dot);
+// }
 
-// TASK 8 - part I
+// findDotInText("Lorem. Ipsum")
+
+// TASK 8 - first method
 
 // function findNumber() {
 
 //     let userInput = prompt(`metn daxil edin`)
 
 // if (userInput.includes(1) || userInput.includes(2)|| 
-// userInput.includes(3)|| 
-// userInput.includes(4)||
-// userInput.includes(5)||
-// userInput.includes(6) ||
-//  userInput.includes(7)|| 
-//  userInput.includes(8) || 
-//  userInput.includes(9) || userInput.includes(0))  {
-//     console.log(`sizin metninizde reqem var`)
+//    userInput.includes(3)  || 
+//    userInput.includes(4)  ||
+//    userInput.includes(5)  ||
+//    userInput.includes(6)  ||
+//    userInput.includes(7)  || 
+//    userInput.includes(8)  || 
+//    userInput.includes(9)  || userInput.includes(0))  {
+//        console.log(`sizin metninizde reqem var`)
 
 // } else {
 //     console.log(`sizin metninizde reqem yoxdur`)
@@ -172,34 +175,98 @@
 
 // findNumber()
 
-// TASK 8 - part II
+
+// TASK 8 - second method
 
 // function numberOrNot() {
-// let userInput = prompt(`metn daxil edin`)
-//  for (let i = 0; i < userInput.length; i++) {
+//      let userInput = prompt(`metn daxil edin`)
+//      for (let i = 0; i < userInput.length; i++) {
 
-//    if (!isNaN(userInput.charAt(i))) {
-//     return console.log(`sizin metninizde reqem var`)
-//    }
-//  }
+//          if (!isNaN(userInput.charAt(i))) {
+//          return console.log(`sizin metninizde reqem var`)
+//          }
+//      }
 //  console.log(`sizin metninizde reqem yoxdur`)
 // }
-
 
 // numberOrNot()
 
 
 
+// TASK 9
 
+// function repeatedSymbolCounter(string, char) {
+//     let word = string
+//     let letter = char
 
-
-
-// function changeFirstWord(word, firstLetter){
-//     const  firstLetter = word.replace(word[0], `R`)
-    
-//      return firstLetter
+//     let splitWord = word.split(letter)
+//     let howManyPieces = splitWord.length-1
+//     console.log(howManyPieces)
 // }
 
+// repeatedSymbolCounter("success", "c"); // 2
 
-// console.log(`Kamil`, `R`)
-// console.log(changeFirstWord())
+
+// TASK 10
+
+// function capitalize(str) {
+    
+//     let firstLetter = str.slice(0, 1);
+//     let upLetter = firstLetter.toUpperCase()
+//     return upLetter+str.slice(1).toLowerCase()
+    
+// }
+// console.log(capitalize("lOreM"));
+
+
+// TASK 11
+
+// function snakeToKebab(str){
+//     let lowerCase = str.toLowerCase()
+//     return lowerCase
+// }
+
+// console.log(snakeToKebab('BU_TEST_UCUNDUR'));
+
+
+// TASK 12
+
+// function changeFirstWord(word, firstLetter){
+//     let changeWord = word.replace(word[0], firstLetter)
+    
+//     return changeWord
+// }
+
+// console.log(changeFirstWord("Kamil", "R"))
+
+
+
+// TASK 13
+
+// function removeCharacterFromString(word) {
+//     let removeText = word.slice(1)
+//     return removeText
+// }
+
+// console.log(removeCharacterFromString("Lorem ipsum dolar sit amet"));
+
+// TASK 14
+
+// function checkIsEmail(email){
+//     let endingOfMails = ["@email.com" , "@outlook.com" , "@gmail.com" ,"@mail.ru" , "@yahoo.com", "@yandex.com"]
+//     function checkFirstStep(){
+//     for (let ending of endingOfMails) {
+//         if (email.endsWith(ending)){
+//             return true;
+//         }
+//     } 
+//     return false
+// }
+    
+    
+//     if (email.includes(".") && checkFirstStep()) {
+//         return console.log(`email is valid`)
+//     }  else console.log(`email is not valid!! check your Email address!!`)
+// }
+
+// checkIsEmail(`@outlook.com`)
