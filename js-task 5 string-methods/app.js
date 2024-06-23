@@ -90,13 +90,21 @@
 
 
 
-// TASK 3
+// TASK 3 - method I
 
 // let num1 = 16792
 // let num2 = 5437
 // let numberLast = num1 * num2
 // console.log(numberLast) // umumi alinan reqem
 // console.log(String(numberLast)[6]) // 6-cı rəqəmi
+
+// TASK 3 - method II
+
+// let num1 = 16792
+// let num2 = 5437
+// let cavab = String(num1 * num2)
+// console.log(cavab) // umumi alinan reqem
+// console.log(cavab.charAt("6")) // 6-cı rəqəmi
 
 
 
