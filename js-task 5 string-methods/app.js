@@ -58,8 +58,8 @@
 // const text = `test@test.com`;
 // const pass = `lorem ipsum`;
 
-// console.log(text.slice(0,4));
-// console.log(text.slice(10));
+// console.log(text.slice(0,4)); //text-i bolur 0dan 4de
+// console.log(text.slice(10)); // text-i bolur 10dan axra qeder
 
 
 //split
@@ -278,3 +278,10 @@
 // }
 
 // checkIsEmail(`@outlook.com`)
+
+
+// part2
+// task1
+// const text="abc"
+// console.log(text.includes("bc"));
+// console.log(text.includes("d"));
