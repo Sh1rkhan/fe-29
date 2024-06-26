@@ -62,9 +62,20 @@
 
            
 //     for (let i = 0; i < numberArray.length; i++) {
-//         numbers2.push(numberArray[i])
+//         numbers2.push(+numberArray[i])
 //             } 
 //             console.log(numbers2)
+
+
+//             let smallestNumber = numbers2[0]; 
+
+//             for (let i = 1; i < numbers2.length; i++) {
+//                 if (numbers2[i] < smallestNumber) {
+//                     smallestNumber = numbers2[i];
+//                 }
+//             } console.log(smallestNumber);
+        
+
 //         }   else {
 //             console.log('reqemleri duzgun daxil edin')
 //         }
