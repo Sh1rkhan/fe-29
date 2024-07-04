@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: yellow;
+        }
+        .flex-container{
+            margin: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+        }
+        .circles{
+            margin: 200px;
+
+        }
+        circle{
+            border: 1px solid;
+            /* width: 100px;
+            height: 100px; */
+            padding: 150px;
+        	margin: 30px;
+            border-radius: 50%;
+        }
+        /* .gray{background-color: gray;}
+        .red{background-color: red;}
+        .blue{background-color: blue;}
+        .yellow{background-color: yellow;} */
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <h1>Color Scheme Switcher</h1>
+        <div class="circles">
+            <circle style= "background-color: gray" class="gray c1"></circle>
+            <circle class="red c1"></circle>
+            <circle class="blue c1"></circle>
+            <circle class="yellow c1"></circle>
+        </div>
+        <h2>Try clicking on one of the colors above <br> to change the background color o this page</h2>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
