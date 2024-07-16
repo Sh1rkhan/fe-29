@@ -117,51 +117,70 @@ const data = [
     },
   ];
 
-let start = document.querySelector(".start")
-let game = document.querySelector(".game")
-let next = document.querySelector(".next")
-console.log(next);
+let start = document.querySelector(".start");
+let game = document.querySelector(".game");
+let next = document.querySelector(".next");
+let endGame = document.querySelector(".endGame");
+let question = document.querySelector(".question");
+let answers = document.querySelectorAll(".answer");
+let points = document.querySelector(".points");
 
-start.onclick = function () {
+let currentQuestionIndex= 0
+
+start.onclick = () => {
     start.classList.add("none")
+    next.classList.remove("none")
     game.classList.remove("none")
-}
-
-
-
-let question = document.querySelector(".question")
-let varA = document.querySelector(".varA")
-let varB = document.querySelector(".varB")
-let varC = document.querySelector(".varC")
-let varD = document.querySelector(".varD")
-  
-
-
-
-console.log(data.length);
-
-
-
-// next.onclick = () => {
-//     data[0].id += 1
-// }
-
-
-function showQuestion() {
-    
+    endGame.classList.add("none")
+    loadQueston()
 }
 
 next.onclick = () => {
-    for (let i = 0; i < data.length; i++) {
-        question.innerText = data[i].title;
-        
-    }
-    
+  currentQuestionIndex++
+  if (currentQuestionIndex < data.length) {
+    loadQueston()
+  } else {
+      next.classList.add("none")
+      endGame.classList.remove("none")
+  }
+}
 
+endGame.onclick = () => {
+  game.classList.add("none")
+  start.classList.remove("none")
+  currentQuestionIndex = 0
+  points.innerText = `Sizin yigdiginiz xal ${correctAnsNum}`
 }
 
 
-index+=1;
-   if (index<data.length) {
-    showQuestion()
-   }
+
+
+function loadQueston() {
+  let currentQuestion = data[currentQuestionIndex]
+  question.innerText = currentQuestion.title
+  answers.forEach((elem, index, array) => {
+    elem.innerText = currentQuestion.answers[index].answer
+    elem.onclick = () => checkAnswer(currentQuestion.answers[index].trueAnswer, elem)
+  }) 
+}
+
+let correctAnsNum = 0
+
+function checkAnswer(correct, elem) {
+  if (correct) {
+    correctAnsNum++
+    elem.style.background = "green"
+    
+    
+  } else {
+      elem.style.background = "red"
+  }
+  
+  setTimeout(() => {
+    elem.style.backgroundColor = "";
+    next.click();
+}, 300);
+}
+
+
+
