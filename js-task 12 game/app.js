@@ -126,6 +126,7 @@ let answers = document.querySelectorAll(".answer");
 let points = document.querySelector(".points");
 
 let currentQuestionIndex= 0
+let correctAnsNum = 0
 
 start.onclick = () => {
     start.classList.add("none")
@@ -133,6 +134,8 @@ start.onclick = () => {
     game.classList.remove("none")
     endGame.classList.add("none")
     loadQueston()
+    points.innerText = `Duzgun cavablarin sayi ${0}`
+    
 }
 
 next.onclick = () => {
@@ -143,13 +146,14 @@ next.onclick = () => {
       next.classList.add("none")
       endGame.classList.remove("none")
   }
+  points.innerText = `Duzgun cavablarin sayi ${correctAnsNum}`
 }
 
 endGame.onclick = () => {
   game.classList.add("none")
   start.classList.remove("none")
   currentQuestionIndex = 0
-  points.innerText = `Sizin yigdiginiz xal ${correctAnsNum}`
+  correctAnsNum = 0
 }
 
 
@@ -161,12 +165,13 @@ function loadQueston() {
   answers.forEach((elem, index, array) => {
     elem.innerText = currentQuestion.answers[index].answer
     elem.onclick = () => checkAnswer(currentQuestion.answers[index].trueAnswer, elem)
+    
   }) 
 }
 
-let correctAnsNum = 0
 
 function checkAnswer(correct, elem) {
+  
   if (correct) {
     correctAnsNum++
     elem.style.background = "green"
@@ -174,13 +179,12 @@ function checkAnswer(correct, elem) {
     
   } else {
       elem.style.background = "red"
+      
   }
-  
+  elem.onclick = null;
   setTimeout(() => {
     elem.style.backgroundColor = "";
     next.click();
-}, 300);
+}, 100);
 }
-
-
 
