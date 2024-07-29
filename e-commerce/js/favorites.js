@@ -4,8 +4,7 @@ console.log(data);
 
 
 let productsData = [];
- // Получаем массив продуктов из данных
-data = { data: { }}
+
 const products = data.products;
 let productsHTML = "";
 
