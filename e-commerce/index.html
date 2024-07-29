@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <nav>
@@ -74,35 +75,7 @@
 
             <div class="products-wrapper">
               <!-- Dinamik olaraq dəyişəcək olan hissə başlayır -->
-              <div class="product">
-                <div class="product-image">
-                  <img
-                    src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-                    alt="${value.title}"
-                  />
-                </div>
 
-                <div class="product-body">
-                  <p class="product-title">iPhone 9</p>
-
-                  <p class="product-rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </p>
-
-                  <p class="product-desc">
-                    An apple mobile which is nothing like apple
-                  </p>
-                  <p class="product-price">$549</p>
-
-                  <button class="add-favorite">
-                    <i class="fa-regular fa-heart"></i>
-                  </button>
-                </div>
-              </div>
               <!-- bitir -->
             </div>
           </div>
@@ -110,10 +83,11 @@
       </div>
     </main>
 
-    <!-- <script
+    <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script> -->
-    <script type="module" src="./script.js"></script>
+    ></script>
+
+    <script src="./script.js"></script>
   </body>
 </html>

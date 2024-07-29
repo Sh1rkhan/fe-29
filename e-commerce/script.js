@@ -1,58 +1,65 @@
-// console.log("Salam");
+const url = "https://dummyjson.com/products";
+const productsWrapper = document.querySelector(".products-wrapper");
+
+let productsData = [];
+
+axios(url)
+  .then(({ data: { products }}) => {
+    productsData = products;
+
+    products.forEach((product) => {
+      let stars = "";
+      const rating = Math.round(product.rating);
+
+      for (let i = 1; i <= rating; i++) {
+        stars += `<i class="fa-solid fa-star"></i>`;
+      }
+
+      productsWrapper.innerHTML += `<div class="product">
+        <div class="product-image">
+          <img
+            src="${product.thumbnail}"
+            alt=""
+          />
+        </div>
+
+        <div class="product-body">
+          <a href="./pages/singleProduct.html?id=${product.id}" class="product-title">${product.title}</a>
+
+          <p class="product-rating">
+            ${stars}
+          </p>
+
+          <p class="product-desc">
+            ${product.description}
+          </p>
+
+          <p class="product-price">$${product.price}</p>
+
+          <button class="add-favorite" onclick="addToCart(${product.id})">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>`;
+    });
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
+
+function addToCart(id) {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 
-// import { products } from "./data.js";
-
-// const productsWrapper = document.querySelector(".products-wrapper");
-// // const a = document.querySelectorAll("a");
-// // const nodelistArray = Array.from(a);
-// console.log(products);
-
-
-
-
-// if (productsWrapper && products.length > 0) {
-//   products.forEach((value, index) => {
-//     productsWrapper.innerHTML += `
-//       <div id="${index + 1}" class="product">
-//         <div class="product-image">
-//           <img
-//             src="${value.thumbnail}"
-//             alt="${value.title}"
-//           />
-//         </div>
-//         <div class="product-body">
-//           <p class="product-title">${value.title}</p>
-//           <p class="product-rating">
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//           </p>
-//           <p class="product-desc">${value.description}</p>
-//           <p class="product-price">$${value.price}</p>
-//           <button class="add-favorite">
-//             <i class="fa-regular fa-heart"></i>
-//           </button>
-//         </div>
-//       </div>
-//     `;
-//   });
-// } else {
-//   console.error("Ошибка: не удалось найти элемент .products-wrapper или массив products пуст.");
-// }
-
-
-const user = {
-  email: "test@test.com",
-  password: 12345,
-  getInfo() {
-    console.log(`${this.email} ${this.email} `);
+  const productIsExist = favorites.find((prod) => prod.id === id);
+  if (productIsExist) {
+    alert("Bu mehsul artiq sebetdedir");
+    return;
   }
+  console.log(favorites);
+  const clicedProduct = productsData.find((prod) => prod.id === id);
+  favorites.push(clicedProduct);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
 }
 
-console.log(
-  user
-);
-
+////
