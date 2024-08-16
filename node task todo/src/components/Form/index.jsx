@@ -59,24 +59,24 @@ const handleDelete = (index) => {
     //     </div>
     // </form>
 
-<form onSubmit={(event)=> {
+<form className='m-24 p-12 border-3 border-solid rounded-2x' onSubmit={(event)=>{
       event.preventDefault()
     
          
       
       
     }}>
-    <input
+    <input className='mb-2.5 p-1.5 border-2 border-solid rounded-lg w-full'
     type="text"
     value={input}
     onChange={handleInputChange}
     onKeyPress={handleKeyPress}
     placeholder="Add a new todo"
   />
-  <button onClick={addTodo}>Add</button>
-  <ul>
+  <button onClick={addTodo} className='mb-2.5 p-1.5 border-2 border-solid rounded-lg ml-1 bg-yell text-white'>Add</button>
+  <ul className=''>
     {todos.map((todo, index) => (
-      <li key={index}>
+      <li key={index} className='mb-2.5 p-1.5 border-2 border-solid rounded-lg ml-1 bg-yellow-300 text-white'>
         {todo}
         <button onClick={() => handleDelete(index)}>Delete</button>
       </li>
